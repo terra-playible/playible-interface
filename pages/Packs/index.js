@@ -4,7 +4,6 @@ import { useForm } from 'react-hook-form';
 import PortfolioContainer from '../../components/containers/PortfolioContainer';
 import LargePackContainer from '../../components/containers/LargePackContainer';
 import Container from '../../components/containers/Container';
-import BackFunction from '../../components/buttons/BackFunction';
 import Main from '../../components/Main'
 import { packList } from './data'
 
@@ -43,33 +42,14 @@ export default function Packs() {
 
         console.log(data)
     }
-    const [isNarrowScreen, setIsNarrowScreen] = useState(false);
 
-    // useEffect(() => {
-    //     // set initial value
-    //     const mediaWatcher = window.matchMedia("(max-width: 500px)")
-    
-    //     //watch for updates
-    //     function updateIsNarrowScreen(e) {
-    //       setIsNarrowScreen(e.matches);
-    //     }
-    //     mediaWatcher.addEventListener('change', updateIsNarrowScreen)
-    
-    //     // clean up after ourselves
-    //     return function cleanup() {
-    //       mediaWatcher.removeEventListener('change', updateIsNarrowScreen)
-    //     }
-    //   })
-    
-    // if (isNarrowScreen) {
     return (
         <Container>
-            <div className="flex flex-col w-full overflow-y-auto h-screen justify-center self-center md:pb-12">
+            <div className="flex flex-col w-screen md:w-full overflow-y-auto h-screen justify-center self-center md:pb-12">
                 <Main color="indigo-white">
-                    <div className="md:ml-6">
-                    <PortfolioContainer textcolor="indigo-black" title="PACKS">
-                        <div className="flex flex-col">
-                            <div className="">
+                    <div className="flex flex-col">
+                        <PortfolioContainer textcolor="indigo-black" title="PACKS">
+                            <div className="flex flex-col mt-4 md:ml-6 self-center md:self-auto">
                                 <div className="md:ml-7 grid grid-cols-1 gap-x-2 gap-y-8 md:grid-cols-4 mt-4 md:mt-12 mb-12">
                                     {
                                         packList.map(function (pack, i) {
@@ -77,7 +57,7 @@ export default function Packs() {
                                             const searchInfo = result.toLowerCase()
                                             if (toFindName.includes(searchInfo))
                                                 return (
-                                                    <div className="">
+                                                    <div className="w-full">
                                                         <a href={`/PackDetails?id=${pack.key}`}>
                                                             <div className="" key={i}>
                                                                 <LargePackContainer
@@ -89,13 +69,11 @@ export default function Packs() {
                                                         </a>
                                                     </div>
                                                 )
-                                            }
-                                        )
+                                        })
                                     }
                                 </div>
                             </div>
-                        </div>
-                    </PortfolioContainer>
+                        </PortfolioContainer>
                     </div>
                 </Main>
             </div>

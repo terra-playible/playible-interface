@@ -83,7 +83,7 @@ const AssetDetails = () => {
 
                   <div className="font-bold flex flex-col">
                     CONGRATULATIONS!
-                    <img src={underlineIcon} className="sm:object-none md:w-6" />
+                    <img src={underlineIcon} className="sm:object-none w-8 md:w-6" />
                   </div>
 
                   <div className="flex flex-col mt-4 items-center">

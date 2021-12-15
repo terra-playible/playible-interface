@@ -142,10 +142,9 @@ const Play = () => {
     
     return (
         <Container>
-            {/* <div className={`font-montserrat h-screen relative flex overflow-x-hidden`}> */}
                 <div className="flex flex-col w-full overflow-y-auto h-screen justify-center self-center md:pb-12">
                     <Main color="indigo-white">
-                        <div className="flex flex-col ml-6">
+                        <div className="flex flex-col md:ml-6">
                             <PortfolioContainer title="PLAY" textcolor="text-indigo-black">
                                 <div className="flex flex-col ml-7 mt-6">
                                     <div className="text-lg font-monument">

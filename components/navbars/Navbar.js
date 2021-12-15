@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { slide as Menu } from 'react-burger-menu'
+import { stack as Menu } from 'react-burger-menu'
 
 var styles = {
     bmBurgerButton: {
@@ -56,7 +56,7 @@ const Navbar = () => {
           <a id="packs" className="menu-item"><Link href="/Packs">PACKS</Link></a>
           <a id="marketplace" className="menu-item"><Link href="/Marketplace">MARKETPLACE</Link></a>
           <a id="play" className="menu-item"><Link href="/Play">PLAY</Link></a>
-          <a id="contract" className="menu-item"><Link href="/ContractInteraction">(ContractInteraction)</Link></a>
+          {/* <a id="contract" className="menu-item"><Link href="/ContractInteraction">(ContractInteraction)</Link></a> */}
       </Menu>
     </div>
   );
