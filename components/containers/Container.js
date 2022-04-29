@@ -4,7 +4,6 @@ import DesktopHeaderBase from '../headers/DesktopHeaderBase';
 import Navbar from '../navbars/Navbar';
 import HeaderBase from '../headers/HeaderBase';
 import DisclaimerHeader from '../headers/DisclaimerHeader';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const Container = (props) => {
   const { children, isAdmin, activeName} = props;

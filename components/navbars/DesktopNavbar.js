@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import NavButtonContainer from '../containers/NavButtonContainer.js';
 import { getNavigation } from './NavigationList.js';
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+
 const DesktopNavbar = (props) => {
   const { children, color, secondcolor, isAdmin, activeName } = props;
 
